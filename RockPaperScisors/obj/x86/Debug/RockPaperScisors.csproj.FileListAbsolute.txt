@@ -1,0 +1,15 @@
+/Users/hernanzambrano-astete/Downloads/RockPaperScissors-RockPaperScissorsVersion1/RockPaperScisors/bin/Debug/RockPaperScisors.exe
+/Users/hernanzambrano-astete/Downloads/RockPaperScissors-RockPaperScissorsVersion1/RockPaperScisors/bin/Debug/RockPaperScisors.pdb
+/Users/hernanzambrano-astete/Downloads/RockPaperScissors-RockPaperScissorsVersion1/RockPaperScisors/obj/x86/Debug/RockPaperScisors.csproj.CoreCompileInputs.cache
+/Users/hernanzambrano-astete/Downloads/RockPaperScissors-RockPaperScissorsVersion1/RockPaperScisors/obj/x86/Debug/RockPaperScisors.exe
+/Users/hernanzambrano-astete/Downloads/RockPaperScissors-RockPaperScissorsVersion1/RockPaperScisors/obj/x86/Debug/RockPaperScisors.pdb
+/Users/hernanzambrano-astete/Workspace/Utils/RockPaperScissorExample/RockPaperScissors-RockPaperScissorsVersion2/RockPaperScisors/bin/Debug/RockPaperScisors.exe
+/Users/hernanzambrano-astete/Workspace/Utils/RockPaperScissorExample/RockPaperScissors-RockPaperScissorsVersion2/RockPaperScisors/bin/Debug/RockPaperScisors.pdb
+/Users/hernanzambrano-astete/Workspace/Utils/RockPaperScissorExample/RockPaperScissors-RockPaperScissorsVersion2/RockPaperScisors/obj/x86/Debug/RockPaperScisors.csproj.CoreCompileInputs.cache
+/Users/hernanzambrano-astete/Workspace/Utils/RockPaperScissorExample/RockPaperScissors-RockPaperScissorsVersion2/RockPaperScisors/obj/x86/Debug/RockPaperScisors.exe
+/Users/hernanzambrano-astete/Workspace/Utils/RockPaperScissorExample/RockPaperScissors-RockPaperScissorsVersion2/RockPaperScisors/obj/x86/Debug/RockPaperScisors.pdb
+/Users/hernanzambrano-astete/Workspace/Utils/RockPaperScissorExample/RockPaperScissors-RockPaperScissorsVersion3/RockPaperScisors/obj/x86/Debug/RockPaperScisors.csproj.CoreCompileInputs.cache
+/Users/hernanzambrano-astete/Workspace/Utils/RockPaperScissorExample/RockPaperScissors-RockPaperScissorsVersion3/RockPaperScisors/obj/x86/Debug/RockPaperScisors.exe
+/Users/hernanzambrano-astete/Workspace/Utils/RockPaperScissorExample/RockPaperScissors-RockPaperScissorsVersion3/RockPaperScisors/obj/x86/Debug/RockPaperScisors.pdb
+/Users/hernanzambrano-astete/Workspace/Utils/RockPaperScissorExample/RockPaperScissors-RockPaperScissorsVersion3/RockPaperScisors/bin/Debug/RockPaperScisors.exe
+/Users/hernanzambrano-astete/Workspace/Utils/RockPaperScissorExample/RockPaperScissors-RockPaperScissorsVersion3/RockPaperScisors/bin/Debug/RockPaperScisors.pdb
