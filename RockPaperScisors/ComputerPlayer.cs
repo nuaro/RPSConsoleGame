@@ -8,5 +8,9 @@ public class ComputerPlayer:BasePlayer
     public override void ChooseWeapon(){
         _choosenWeapon = (BasePlayer.Weapon)rand.Next(0, 3);
     }
+
+    public override bool isComputerPlayer(){
+        return true;
+    }
 }
 

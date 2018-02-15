@@ -10,16 +10,11 @@ public class Player : BasePlayer
     public override void ChooseWeapon(){
 
         bool result = Int32.TryParse(Console.ReadLine(), out int outWeapon);
-
         if (result == false){
             _weaponOfChoise = -1;
         }
 
         _weaponOfChoise = outWeapon -1;
-       
-        
-
-        
 
     }
 
@@ -31,6 +26,10 @@ public class Player : BasePlayer
             _choosenWeapon = (BasePlayer.Weapon)_weaponOfChoise;
 
         return success;
+    }
+    public override bool isComputerPlayer()
+    {
+        return false;
     }
 }
 

@@ -10,18 +10,47 @@ public class RPSController
 
     public void StartGame(){
         AddPlayers();
-        GameLoop();
-        
+        GameLoop();     
     }
 
     public void AddPlayers(){
         RPSModel.Instance.AddPlayer(RPSModel.Instance.LIVEPLAYER);
-        RPSModel.Instance.AddPlayer(RPSModel.Instance.COMPUTER_PLAYER, true);
+        bool computer = false;
+        if (RPSModel.Instance.gameMode == RPSModel.GameMode.SinglePlayer)
+        {
+            computer = true;
+        }
+        RPSModel.Instance.AddPlayer(RPSModel.Instance.COMPUTER_PLAYER, computer);
+    }
+
+    public void ChooseGame(){
+        string answer = "";
+        do
+        {
+            //Console.Clear();
+            Console.WriteLine("-- Rock, Paper, Scissors --");
+            Console.WriteLine("-- How Many Players : --");
+            Console.Write("1 or 2 ");
+
+            answer = Console.ReadLine();
+
+            Console.Write("--- answer  {0} ",answer);
+        } while (answer != "1" && answer != "2");
+        if(answer == "1"){
+            RPSModel.Instance.gameMode = RPSModel.GameMode.SinglePlayer;
+        }
+        if(answer =="2"){
+            RPSModel.Instance.gameMode = RPSModel.GameMode.Multiplayer;
+
+        }
+
+        StartGame();
     }
 
     public void GameLoop(){
-        BasePlayer computerPlayer = RPSModel.Instance.GetPlayerByName(RPSModel.Instance.COMPUTER_PLAYER);
-        BasePlayer livePlayer = RPSModel.Instance.GetPlayerByName(RPSModel.Instance.LIVEPLAYER);
+       
+        BasePlayer player1 = RPSModel.Instance.GetPlayerByName(RPSModel.Instance.LIVEPLAYER);
+        BasePlayer player2 = RPSModel.Instance.GetPlayerByName(RPSModel.Instance.COMPUTER_PLAYER);
 
 
 
@@ -32,30 +61,18 @@ public class RPSController
             RPSModel.Instance.ChangeState(RPSModel.GameState.StartGame);
 
 
-            computerPlayer.ChooseWeapon();
-            do
-            {
-                RPSModel.Instance.ChangeState(RPSModel.GameState.PlayerCanChoose);
+            PlayerChooseeLoop(player2);
+            PlayerChooseeLoop(player1);
+           
 
-
-                livePlayer.ChooseWeapon();
-
-                bool testResponse = livePlayer.IsAValidWeapon();
-                if(testResponse == false){
-                    RPSModel.Instance.ChangeState(RPSModel.GameState.PlayerChooseError); 
-                }
-
-            } while (livePlayer.IsAValidWeapon() == false);
-
-
-            if (livePlayer == computerPlayer)
+            if (player1 == player2)
             {
                 RPSModel.Instance.ChangeState(RPSModel.GameState.Draw);
                 RPSModel.Instance.AddDrawScore();
             }
             else
             {
-                BasePlayer winner = livePlayer * computerPlayer;
+                BasePlayer winner = player1 * player2;
                 winner.AddScore();
                 if (winner.name.Equals((RPSModel.Instance.LIVEPLAYER)))
                 {
@@ -73,6 +90,31 @@ public class RPSController
 
 
         } while (answer.ToLower() == "y" || answer.ToLower() == "yes");
+    }
+
+    public void PlayerChooseeLoop(BasePlayer player){
+        if (player.isComputerPlayer())
+        {
+            player.ChooseWeapon();
+        }
+        else
+        {
+            do
+            {
+                RPSModel.Instance.ChangeState(RPSModel.GameState.PlayerCanChoose);
+
+
+                player.ChooseWeapon();
+
+                bool testResponse = player.IsAValidWeapon();
+                if (testResponse == false)
+                {
+                    RPSModel.Instance.ChangeState(RPSModel.GameState.PlayerChooseError);
+                }
+
+            } while (player.IsAValidWeapon() == false);
+        }
+
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 public class RPSModel
 {
@@ -17,14 +18,27 @@ public class RPSModel
     public delegate void ModelChangeHandler(GameState state, EventArgs e);
     public event ModelChangeHandler Change;
 
-    private List<BasePlayer> players = new List<BasePlayer>();
+    private List<BasePlayer> _players = new List<BasePlayer>();
 
-    public int _drawScore;
+    public ReadOnlyCollection<BasePlayer> players {
+        get
+        {
+            return _players.AsReadOnly();
+        }
+    }
+
+    private int _drawScore;
     public int drawScore {
         get{
             return _drawScore;
         }
-    } 
+    }
+
+    public GameMode gameMode;
+    public enum GameMode {
+        SinglePlayer,
+        Multiplayer
+    }
 
     public enum GameState {
         StartGame,
@@ -101,12 +115,12 @@ public class RPSModel
         else {
             player = new Player(playerName);
         }
-        players.Add(player);
+        _players.Add(player);
         
     }
 
     public BasePlayer GetPlayerByName (string name){
-        foreach(BasePlayer player in players){
+        foreach(BasePlayer player in _players){
             if(player.name == name){
                 return player;
             }
@@ -117,6 +131,10 @@ public class RPSModel
 
     public void AddDrawScore(){
         _drawScore++;
+    }
+
+    public void ClearPlayerList(){
+        _players.Clear();
     }
  }
 
