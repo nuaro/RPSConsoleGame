@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{922864F9-689B-44E9-ABCD-282A5D7DA0B7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="RockPaperScisors/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RockPaperScisors/RPsView.cs">
     <Files>
-      <File FileName="RockPaperScisors/Program.cs" Line="11" Column="53" />
+      <File FileName="RockPaperScisors/Program.cs" Line="16" Column="2" />
       <File FileName="RockPaperScisors/BasePlayer.cs" Line="42" Column="1" />
       <File FileName="RockPaperScisors/RPSModel.cs" Line="75" Column="1" />
-      <File FileName="RockPaperScisors/RPSController.cs" Line="11" Column="29" />
-      <File FileName="RockPaperScisors/Player.cs" Line="4" Column="44" />
+      <File FileName="RockPaperScisors/RPSController.cs" Line="41" Column="43" />
+      <File FileName="RockPaperScisors/Player.cs" Line="19" Column="78" />
       <File FileName="RockPaperScisors/ComputerPlayer.cs" Line="13" Column="1" />
+      <File FileName="RockPaperScisors/RPsView.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

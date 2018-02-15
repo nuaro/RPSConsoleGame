@@ -40,6 +40,10 @@ public abstract class BasePlayer
 
     public abstract void ChooseWeapon();
 
+    public virtual bool IsAValidWeapon(){
+        return false;
+    }
+
     public void AddScore(){
         _score++;
     }

@@ -33,10 +33,20 @@ public class RPSController
 
 
             computerPlayer.ChooseWeapon();
-            RPSModel.Instance.ChangeState(RPSModel.GameState.PlayerCanChoose);
+            do
+            {
+                RPSModel.Instance.ChangeState(RPSModel.GameState.PlayerCanChoose);
 
 
-            livePlayer.ChooseWeapon();
+                livePlayer.ChooseWeapon();
+
+                bool testResponse = livePlayer.IsAValidWeapon();
+                if(testResponse == false){
+                    RPSModel.Instance.ChangeState(RPSModel.GameState.PlayerChooseError); 
+                }
+
+            } while (livePlayer.IsAValidWeapon() == false);
+
 
             if (livePlayer == computerPlayer)
             {

@@ -29,6 +29,7 @@ public class RPSModel
     public enum GameState {
         StartGame,
         PlayerCanChoose,
+        PlayerChooseError,
         Draw,
         PlayerWon,
         PlayerLose,

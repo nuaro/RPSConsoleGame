@@ -30,6 +30,12 @@ public class RPSView
             case RPSModel.GameState.PlayAgain:
                 QuestionDisplayAgain();
                 break;
+            case RPSModel.GameState.PlayerChooseError:
+                DisplayGreeting();
+                DisplayError();
+                DisplayPlayerScores();
+                break;
+                
         }
     }
 
@@ -72,6 +78,10 @@ public class RPSView
 
     private void ClearDisplay(){
         Console.Clear();
+    }
+
+    private void DisplayError(){
+        Console.WriteLine("Enter a Valid Weapon");
     }
 
 }
