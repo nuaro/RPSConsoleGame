@@ -41,6 +41,7 @@ public class RPSModel
     }
 
     public enum GameState {
+        ChooseGameMode,
         StartGame,
         PlayerCanChoose,
         PlayerChooseError,

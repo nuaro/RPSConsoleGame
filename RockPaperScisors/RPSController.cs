@@ -27,14 +27,10 @@ public class RPSController
         string answer = "";
         do
         {
-            //Console.Clear();
-            Console.WriteLine("-- Rock, Paper, Scissors --");
-            Console.WriteLine("-- How Many Players : --");
-            Console.Write("1 or 2 ");
-
+           
+            RPSModel.Instance.ChangeState(RPSModel.GameState.ChooseGameMode);
             answer = Console.ReadLine();
 
-            Console.Write("--- answer  {0} ",answer);
         } while (answer != "1" && answer != "2");
         if(answer == "1"){
             RPSModel.Instance.gameMode = RPSModel.GameMode.SinglePlayer;

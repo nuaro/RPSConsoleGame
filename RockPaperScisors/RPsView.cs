@@ -35,6 +35,10 @@ public class RPSView
                 DisplayError();
                 DisplayPlayerScores();
                 break;
+            case RPSModel.GameState.ChooseGameMode:
+                //display choose option
+                DisplayChooseGameMode();
+                break;
                 
         }
     }
@@ -82,6 +86,13 @@ public class RPSView
 
     private void DisplayError(){
         Console.WriteLine("Enter a Valid Weapon");
+    }
+
+    private void DisplayChooseGameMode(){
+        ClearDisplay();
+        Console.WriteLine("-- Rock, Paper, Scissors --");
+        Console.WriteLine("-- How Many Players : --");
+        Console.Write("1 or 2 "); 
     }
 
 }
